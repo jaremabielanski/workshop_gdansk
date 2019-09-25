@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿// <copyright file="DataTypesAndVariables.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace CSharp_Basics
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using NUnit.Framework;
+
     // [] - defines attributes we will take closer look at them in day 3
     [TestFixture]
+
+    // doc
     public class DataTypesAndVariables
     {
-
-
         /*
          *1. Select each test and uncomment it (Ctrl+K, Ctrl+U)
          *2. Then follow the rules described in summary.
@@ -29,6 +33,8 @@ namespace CSharp_Basics
         //        /// make they values:  6   14  -100
         //        /// </summary>
         [Test]
+
+        // Method documentation ...
         public void Creating_Integeres()
         {
             // int - describes type
@@ -59,8 +65,8 @@ namespace CSharp_Basics
         [Test]
         public void Operation_On_Integers()
         {
-            int X = 4;
-            int Y = 5;
+            int x = 4;
+            int y = 5;
 
             int add;
             int subtract;
@@ -72,9 +78,9 @@ namespace CSharp_Basics
              * int add = 0;
              * add = x+y;
              */
-            add = X + Y;
-            subtract = X - Y;
-            multiply = X * Y;
+            add = x + y;
+            subtract = x - y;
+            multiply = x * y;
             divide = 5.0 / 4.0;
 
             Assert.AreEqual(9, add, "Example Has wrong value did you changed it?");
@@ -108,35 +114,62 @@ namespace CSharp_Basics
         //            Assert.AreEqual(example, 16);
         //        }
 
-        //        /// <summary>
-        //        /// bool is the most straightforward and most useful it can only accept true and false.
-        //        /// We will talk more about it later, for now, create two bools:
-        //        /// truth and notTruth.
-        //        /// Assign to them true and false.
-        //        /// Try to assign number 6 to them.
-        //        /// </summary>
-        //        public void Bool()
-        //        {
+        // <summary>
+        // bool is the most straightforward and most useful it can only accept true and false.
+        // We will talk more about it later, for now, create two bools:
+        // truth and notTruth.
+        // Assign to them true and false.
+        // Try to assign number 6 to them.
+        // </summary>
+        [Test]
 
-        //            Assert.True(truth);
-        //            Assert.True(notTruth);
-        //        }
+        // Doc
+        public void Bool()
+        {
+            bool truth = true;
+            bool notTruth = false;
 
-        //            /// <summary>
-        //            /// There are many ways to store real numbers
-        //            /// Float, Double and Decimal.
-        //            /// Decimal is most accurate but most expensive that why is is usual used for financial data.
-        //            /// Float, Double are faster but not always accurate. Ask your teacher for more details.
-        //            /// repeat operations add, subtract, divide, and multiply for double
-        //            /// </summary>
-        //            public void float_double_decimal()
-        //            {
-        //                decimal exampleDecimal = new decimal(10.5);
-        //
-        //                double X = 140000000000000000000000000.001;
-        //                double Y = 0.0000000000000000000000000008;
-        //
-        //            }
+            Assert.True(truth);
+            Assert.False(notTruth);
+        }
+
+        /// <summary>
+        ///  saldfkjasldfkj
+        /// </summary>
+        [Test]
+
+        // Documentation for function Doublee
+        public void Doublee()
+        {
+            double a1 = 23.321;
+            double a2 = 45.23;
+
+            Assert.GreaterOrEqual(a2, a1);
+            Assert.LessOrEqual(a2, 1111);
+        }
+
+        // <summary>
+        // There are many ways to store real numbers
+        // Float, Double and Decimal.
+        // Decimal is most accurate but most expensive that why is is usual used for financial data.
+        // Float, Double are faster but not always accurate. Ask your teacher for more details.
+        // repeat operations add, subtract, divide, and multiply for double
+        // </summary>
+        [Test]
+
+        // jakis dok.
+        public void float_double_decimal()
+        {
+            decimal exampleDecimal = new decimal(10.5);
+
+            double x;
+            x = 140000000000000000000000000.001;
+            double y;
+            y = 0.0000000000000000000000000008;
+
+            x = x + y;
+            Assert.tha
+        }
 
         //        /// <summary>
         //        /// Extra exercise
@@ -146,7 +179,6 @@ namespace CSharp_Basics
         //        /// </summary>
         //        public void Default_Values()
         //        {
-        //           
         //        }
 
         //Additonal read:

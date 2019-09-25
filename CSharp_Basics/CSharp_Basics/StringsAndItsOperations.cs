@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿// <copyright file="StringsAndItsOperations.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace CSharp_Basics
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using System.Threading.Tasks;
+    using NUnit.Framework;
+
     [TestFixture]
+
+    // Documentation ...
     public class StringsAndItsOperations
     {
-        //        /// <summary>
-        //        /// String is diffrent then previues types we talk about
-        //        /// values of string we are passing in quotation marks
-        //        /// 
-        //        /// Create new string with your name and then add them together
-        //        /// </summary>
-        //        [Test]
-        //        public void Bascis_Of_Strings()
-        //        {
-        //            string Example = "This is example string";
-        //        }
+        // // <summary>
+        // // String is diffrent then previues types we talk about
+        // // values of string we are passing in quotation marks
+        // // Create new string with your name and then add them together
+        // // </summary>
+        // [Test]
+        // public void Bascis_Of_Strings()
+        // {
+        // string Example = "This is example string";
+        // }
 
-        //        /// <summary>
+        // // <summary>
         //        ///  string is  first Reference Type you see (We will talk more about them later)
         //        ///  which means he doesn't have to have value.
         //        ///  use string.Empty;
@@ -35,7 +41,7 @@ namespace CSharp_Basics
         //            Assert.That(itsEmpty, Is.Not.Null);
         //        }
 
-        //        /// <summary>
+        // /// <summary>
         //        /// + is not best way of adding string
         //        ///  use string.Concat();
         //        ///  put sentence together
@@ -49,11 +55,11 @@ namespace CSharp_Basics
         //            Assert.AreEqual(result, "I like pancakes.");
         //        }
 
-        //        /// <summary>
-        //        /// There is few more ways of constructing strings for example if you need add values of other variables inside you can do
-        //        /// https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netframework-4.7.1#Starting
-        //        /// create string with both x and y insed
-        //        /// </summary>
+        // // <summary>
+        // // There is few more ways of constructing strings for example if you need add values of other variables inside you can do
+        // // https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netframework-4.7.1#Starting
+        //        // create string with both x and y insed
+        //        // </summary>
         //        [Test]
         //        public void String_Format()
         //        {
