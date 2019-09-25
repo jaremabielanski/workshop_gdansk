@@ -1,5 +1,8 @@
 # workshop_gdansk
-Hello Gdansk!
+He 123 llo Gdansk!
 
 
-Zmiana jakas
+ana jakas
+
+
+zmiana 1
