@@ -63,7 +63,9 @@ namespace CSharp_Basics
         //        /// discuss why divide is not working
         //        /// </summary>
         [Test]
-        public void Operation_On_Integers()
+
+        // Documentation for the following function ->>>>
+        public void OperationOnIntegers()
         {
             int x = 4;
             int y = 5;
@@ -134,7 +136,7 @@ namespace CSharp_Basics
         }
 
         /// <summary>
-        ///  saldfkjasldfkj
+        ///  saldfkjasldfkj ...
         /// </summary>
         [Test]
 
@@ -157,8 +159,8 @@ namespace CSharp_Basics
         // </summary>
         [Test]
 
-        // jakis dok.
-        public void float_double_decimal()
+        // Documentation: Some kind of documentation in here
+        public void FloatDoubleDecimal()
         {
             decimal exampleDecimal = new decimal(10.5);
 
@@ -168,7 +170,12 @@ namespace CSharp_Basics
             y = 0.0000000000000000000000000008;
 
             x = x + y;
-            Assert.tha
+            Assert.That(true);
+
+            StringAssert.Contains("hallo","flsdkjfl hallo");
+
+            Console.WriteLine(string.Format("Święta {0} Narodzenia {1}", "Bożego", "już wkrótce"));
+
         }
 
         //        /// <summary>
