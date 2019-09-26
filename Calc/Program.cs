@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Calc
 {
@@ -13,41 +10,49 @@ namespace Calc
 
             Console.WriteLine("Dzień dobry - liczymy ...");
 
-            Console.Write("Wczytaj pierwszą cyfrę:");
-            string a = Console.ReadLine();
+            int a = GetValueFromUser("Wczytaj pierwszą cyfrę:");
 
-            Console.Write("Wczytaj drugą cyfrę:");
-            string b = Console.ReadLine();
+            int b = GetValueFromUser("Wczytaj pierwszą cyfrę:");
 
-            char[] intArray = { 'd', 'o', 'm', 'e' };
+            char[] intArray = { 'd', 'o', 'x', 'e' };
 
             Console.WriteLine("Odpowiednio wyniki: dod, odej, mnoż, dziel");
             foreach (char c in intArray)
             {
-                Console.WriteLine(Oper(int.Parse(a), int.Parse(b), c));
+                Console.WriteLine(Oper(a, b, c));
             }
             Console.ReadLine();
         }
 
         public static int Oper(int a, int b, char op)
         {
+
             switch (op)
             {
                 case 'd':
                     {
-                        return (a + b);
+                        return a + b;
                     }
                 case 'o':
                     {
-                        return (a - b);
+                        return a - b;
                     }
+                case 'x':
+                case '*':
                 case 'm':
                     {
-                        return (a * b);
+                        return a * b;
                     }
+                case '/':
                 case 'e':
                     {
-                        return (a / b);
+                        if (b == 0)
+                        {
+                            Console.WriteLine("Nie dzielimy przez 0");
+                            return 0;
+                        }
+
+                        return a / b;
                     }
                 default:
                     {
@@ -55,5 +60,23 @@ namespace Calc
                     }
             }
         }
+        public static int GetValueFromUser(string messege)
+        {
+            Console.Write("Wczytaj drugą cyfrę:");
+            string a = Console.ReadLine();
+            if (int.TryParse(a, out int tmp))
+            {
+                Console.WriteLine("Can parse it: " + a);
+                return tmp;
+            }
+            else
+            {
+                Console.WriteLine("Cannot parse it: " + tmp);
+                Console.ReadLine();
+                return tmp;
+            }
+
+        }
+
     }
 }
