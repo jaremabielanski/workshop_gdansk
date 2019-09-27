@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    class Calculations
+    public class Calculations
     {
 
         public static float Oper(MathData md)
@@ -80,10 +80,7 @@ namespace Calc
             int firstNumber = Calculations.GetValueFromUser("Wczytaj pierwszą cyfrę: ");
             int secondNumber = Calculations.GetValueFromUser("Wczytaj pierwszą cyfrę: ");
 
-            MathData mathData = new MathData();
-
-            mathData.firstNumber = firstNumber;
-            mathData.secondNumber = secondNumber;
+            MathData mathData = new MathData(firstNumber, secondNumber, 'd');
 
             return mathData;
         }

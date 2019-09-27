@@ -11,5 +11,17 @@ namespace Calc
         public int firstNumber;
         public int secondNumber;
         public char operation;
+
+        public MathData(int first, int second, char op)
+        {
+            firstNumber = first;
+            secondNumber = second;
+            operation = op;
+        }
+
+        public MathData()
+        { 
+        }
+
     }
 }
