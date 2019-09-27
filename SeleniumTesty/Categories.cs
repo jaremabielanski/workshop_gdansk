@@ -5,32 +5,25 @@ using OpenQA.Selenium.Chrome;
 namespace SeleniumTesty
 {
     [TestFixture]
-    public class KlasaTestowa
+    public class Categories : TestBase
     {
 
-        IWebDriver driver;
+        CategoriesPage sut;
 
         [SetUp]
-        public void Setup()
+        public void CategoriesSetup()
         {
-            driver = new ChromeDriver();
-            var waitTime = new System.TimeSpan(0, 0, 1);
-            driver.Manage().Timeouts().ImplicitWait = waitTime;
+            sut = new CategoriesPage(driver);
+            sut.GoToPage();
         }
 
         [Test]
         public void TShirts()
         {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            sut.GoToPage();
+            sut.ClickBtn();
 
-            var categoryHeader = driver.FindElement(By.CssSelector("ul.sf-menu > li > a[title='T-shirts']"));
-            categoryHeader.Click();
-
-            var productCounter = driver.FindElement(By.CssSelector(".heading-counter"));
-            var webElements = driver.FindElements(By.CssSelector("div.product-container"));
-            string cntEl = webElements.Count.ToString();
-            
-            StringAssert.Contains(cntEl, productCounter.Text);
+            StringAssert.Contains(sut.CountObjectsOnPage('w'), sut.CountObjectsOnPage('p'));
         }
 
         [Test]
@@ -56,13 +49,6 @@ namespace SeleniumTesty
 
             var productCounter = driver.FindElement(By.CssSelector(".heading-counter"));
             StringAssert.Contains("5", productCounter.Text);
-        }
-
-
-        [TearDown]
-        public void TearDown()
-        {
-            driver.Quit();
         }
 
     }
